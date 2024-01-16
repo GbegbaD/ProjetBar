@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredients</title>
+</head>
+<body>
+    <h1>Liste des ingrédients</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>État</th>
+                <th>Quantité</th>
+                <th>Unité</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($ingredients as $ingredient)
+                <tr>
+                    <td>{{ $ingredient->id }}</td>
+                    <td>{{ $ingredient->nom }}</td>
+                    <td>{{ $ingredient->etat }}</td>
+                    <td>{{ $ingredient->quantite }}</td>
+                    <td>{{ $ingredient->unite }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+    <a href="/add">Ajouter un ingrédient</a>
+</body>
+</html>
